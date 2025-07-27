@@ -1,0 +1,146 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+
+.hero {
+  background-image: url("../src/img/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+  height: 50vh;
+  @include flex-center;
+
+  &__content {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: $gap;
+    line-height: 2;
+    backdrop-filter: invert(30%);
+  }
+}
+
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: $gap*2;
+
+  &__info,
+  &__form-container {
+    text-align: center;
+    margin: $gap;
+  }
+
+  &__heading {
+    font-size: 1.5rem;
+    margin-bottom: $gap;
+  }
+
+  &__email,
+  &__phone,
+  &__city,
+  &__address {
+    margin-bottom: 0.5rem;
+  }
+
+  &__form {
+    margin: $gap auto;
+    max-width: 400px;
+  }
+
+  &__table {
+    width: 100%;
+    border-spacing: 0.5rem;
+  }
+
+  &__row {
+    td {
+      vertical-align: top;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    margin-bottom: 0.25rem;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid #fe9090;
+    font-size: $gap;
+    transition: border-color 0.3s;
+
+    &:focus-visible {
+      outline: 3px solid #2b95f9;
+      outline-offset: 2px;
+      box-shadow: 0 0 0 3px rgba(43, 149, 249, 0.4);
+      border-color: #2b95f9;
+    }
+  }
+
+  &__textarea {
+    resize: vertical;
+  }
+
+  &__button-group {
+    @include flex-space-between($gap: 1rem);
+    margin-top: $gap;
+  }
+
+  &__submit,
+  &__reset {
+    padding: 10px 20px;
+    font-weight: bold;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: box-shadow 0.2s ease, background-color 0.2s ease, outline 0.2s ease;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &:focus-visible {
+      outline: 3px solid #2b95f9;
+      outline-offset: 2px;
+      box-shadow: 0 0 0 3px rgba(43, 149, 249, 0.4);
+    }
+  }
+
+  &__submit {
+    background-color: #57d095;
+  }
+
+  &__reset {
+    background-color: #f46368;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: center;
+    margin: $gap*7;
+
+    &__info,
+    &__form-container {
+      flex: 1;
+      max-width: 500px;
+    }
+
+    &__info {
+      div {
+        margin: 2rem 0;
+      }
+    }
+  }
+}

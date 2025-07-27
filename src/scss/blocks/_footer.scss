@@ -1,0 +1,9 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.footer {
+  background-color: #393636;
+  color: white;
+  text-align: center;
+  padding: $gap;
+}

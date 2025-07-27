@@ -1,0 +1,49 @@
+@media (orientation: portrait) {
+  .hero {
+    height: 60vh;
+    font-size: 1.5rem;
+  }
+
+  .contact {
+    flex-direction: column;
+    margin: 2rem;
+  }
+
+  .projects__card {
+    height: 50vh;
+  }
+
+  .bio {
+    flex-direction: column;
+    gap: 2rem;
+
+    &__dp img {
+      width: 120px;
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  .hero {
+    height: 40vh;
+    font-size: 2.5rem;
+  }
+
+  .contact {
+    flex-direction: row;
+    margin: 5rem;
+  }
+
+  .projects__card {
+    height: 80vh;
+  }
+
+  .bio {
+    flex-direction: row;
+    gap: 4rem;
+
+    &__dp img {
+      width: 150px;
+    }
+  }
+}

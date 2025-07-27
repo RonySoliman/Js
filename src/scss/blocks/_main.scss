@@ -1,0 +1,103 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+
+.bio {
+  background-color: #919191;
+  padding: $spacing-md;
+
+
+
+  &__dp img {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__about {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem 0rem;
+    background-color: #2e2929;
+    color: #919191;
+  }
+
+  &__summary {
+    font-size: 1.2rem;
+    margin: 1rem;
+  }
+
+  &__button {
+    @include flex-center;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    &--resume,
+    &--linked-in {
+      padding: 0.5rem 1rem;
+      border: none;
+      color: #2b2b2b;
+      font-weight: bold;
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+        color: inherit; 
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+
+
+    &--resume {
+      background-color: #eb6666;
+    }
+
+    &--linked-in {
+      background-color: #888bec;
+    }
+
+    &--resume:hover {
+      background-color: #f78383;
+    }
+
+    &--linked-in:hover {
+      background-color: #9fa2f9;
+    }
+
+
+  }
+  
+}
+
+@media (min-width: 768px) {
+  .bio {
+    @include flex-center;
+    flex-direction: row;
+    gap: 50px;
+
+    
+    background-image: url('/./src/img/background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    animation: waterFloat 7s ease-in-out infinite;
+
+    &__dp img {
+      margin-top: 1rem;
+      height: 165px;
+    }
+  }
+}
+@keyframes waterFloat {
+  0% {
+    background-position-y: 0%;
+  }
+  50% {
+    background-position-y: 5%;
+  }
+  100% {
+    background-position-y: 0%;
+  }
+}
