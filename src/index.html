@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>VVK Portfolio</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="A Portfolio page">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="../dist/main.css" />
+    </head>
+    <body>
+        <a href="#main" class="skip-link">Skip to main content</a>
+        <header class="header" role="banner">
+            <a href="#"><div class="header__logo">VVK</div></a>
+            <input type="checkbox" name="checkbox" id="nav-toggle" class="header__toggle" />
+            <label for="nav-toggle" class="header__menu" aria-label="Toggle navigation">
+                <span class="header__menu-bar" aria-label="hamburger"></span>
+                <span class="header__menu-bar" aria-label="hamburger"></span>
+                <span class="header__menu-bar" aria-label="hamburger"></span>
+            </label>
+            <nav class="header__nav" role="navigation" aria-label="Main navigation">
+                <ul class="header__list">
+                    <li class="header__item" role="navigation"><a href="#skills" class="header__link">Skills</a></li>
+                    <li class="header__item" role="navigation"><a href="#projects" class="header__link">Projects</a></li>
+                    <li class="header__item" role="navigation"><a href="#resume-contact" class="header__link">Resume</a></li>
+                    <li class="header__item" role="navigation"><a href="../src/page/contact.html" class="header__link">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main">
+            <section id="bio" class="bio">
+                <div>
+                    <figure class="bio__dp">
+                        <img src="img/vk.jpg" alt="Profile avatar of VVK" />
+                    </figure>
+                </div>
+                <div class="bio__about">
+                    <h1 class="bio__designation">Intro Heading</h1>
+                    <p class="bio__summary">Short blurb about the developer, lorem ipsum, etc.</p>
+                    <div class="bio__button" id="resume-contact">
+                        <button class="bio__button--resume" id="resume" value="Download Resume"><a href="../src/img/vk.pdf" target="_blank">Download Resume</a></button>
+                        <button class="bio__button--linked-in" id="contact" value="Linked In"><a href="https://www.linkedin.com/feed/" target="_blank">Linked In</a></button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="latest-projects">
+                <h2 class="project__heading">Latest Projects</h2>
+                <div class="projects__cards">
+                    <article class="projects__card project1">
+                        <h3>Project 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus saepe doloribus quasi at voluptas obcaecati, hic incidunt voluptates dignissimos inventore sequi nostrum quae vero. Laboriosam dignissimos odio eum velit. Nam?</p>
+                    </article>
+                    <article class="projects__card project2">
+                         <h3>Project 2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus saepe doloribus quasi at voluptas obcaecati, hic incidunt voluptates dignissimos inventore sequi nostrum quae vero. Laboriosam dignissimos odio eum velit. Nam?</p>
+                    </article>
+                    <article class="projects__card project3">
+                         <h3>Project 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus saepe doloribus quasi at voluptas obcaecati, hic incidunt voluptates dignissimos inventore sequi nostrum quae vero. Laboriosam dignissimos odio eum velit. Nam?</p>
+                    </article>
+                </div>
+                <button class="projects__repo" value="GitHub"><a href="https://github.com/v-vinay2" target="_blank">GitHub</a></button>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; VVK 2025</p>
+        </footer>
+    </body>
+</html>
