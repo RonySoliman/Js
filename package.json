@@ -1,0 +1,21 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "VK",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "sass src/scss/style.scss dist/main.css",
+    "watch-css": "sass --watch src/scss/style.scss:dist/main.css"
+  },
+  "author": "VVK",
+  "license": "ISC",
+
+  "dependencies": {
+    "less-watch-compile": "^2.1.0",
+    "sass": "^1.89.2"
+  },
+  "devDependencies": {
+    "less": "^4.4.0"
+  }
+}
