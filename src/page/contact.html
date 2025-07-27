@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact page">
+    <link rel="stylesheet" href="./../../dist/main.css">
+    <title>Contact</title>
+</head>
+<body>
+    <header class="header" role="banner">
+            <a href="../index.html"><div class="header__logo">VVK</div></a>
+            <input type="checkbox" name="checkbox" id="nav-toggle" class="header__toggle" />
+            <label for="nav-toggle" class="header__menu" aria-label="Toggle navigation">
+                <span class="header__menu-bar"></span>
+                <span class="header__menu-bar"></span>
+                <span class="header__menu-bar"></span>
+            </label>
+            <nav class="header__nav" role="navigation" aria-label="Main navigation">
+                <ul class="header__list">
+                    <li class="header__item" role="navigation"><a href="../index.html" class="header__link">Skills</a></li>
+                    <li class="header__item" role="navigation"><a href="../index.html" class="header__link">Projects</a></li>
+                    <li class="header__item" role="navigation"><a href="../index.html" class="header__link">Resume</a></li>
+                    <li class="header__item" role="navigation"><a href="../src/page/contact.html" class="header__link">Contact</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">CONTACT</h1>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="contact__info">
+                <h2 class="contact__heading">Contact Details</h2>
+                <div class="contact__email-phone">
+                    <p class="contact__email">vkv@gmail.com</p>
+                    <p class="contact__phone">(+91) 798-9123</p>
+                </div>
+                <div class="contact__location">
+                    <h3 class="contact__city">Hyderabad</h3>
+                    <address class="contact__address">
+                        <p>123 NK Avenue Street</p>
+                        Kondapur, CA 12345
+                    </address>
+                </div>
+            </div>
+
+            <div class="contact__form-container">
+                <h2 class="contact__heading">Message</h2>
+                <form class="contact__form" action="#" method="post">
+                    <table class="contact__table">
+                        <tr class="contact__row">
+                            <td><label for="name" class="contact__label">Name</label></td>
+                            <td><input type="text" id="name" name="name" class="contact__input" placeholder="e.g John Smith"></td>
+                        </tr>
+                        <tr class="contact__row">
+                            <td><label for="email" class="contact__label">Email</label></td>
+                            <td><input type="email" id="email" name="email" class="contact__input" placeholder="e.g name@domain.tld"></td>
+                        </tr>
+                        <tr class="contact__row">
+                            <td><label for="message" class="contact__label">Message</label></td>
+                            <td>
+                                <textarea id="message" name="message" class="contact__textarea" rows="4" cols="30" minlength="20" maxlength="500" placeholder="Type your message here (between 20 and 500 characters)"></textarea>
+                            </td>
+                        </tr>
+                        <tr class="contact__row">
+                            <td></td>
+                            <td>
+                                <div class="contact__button-group">
+                                    <input type="submit" value="SEND" class="contact__submit">
+                                    <input type="reset" value="RESET" class="contact__reset">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="footer">
+            <p>&copy; VVK 2025</p>
+    </footer>
+</body>
+</html>
